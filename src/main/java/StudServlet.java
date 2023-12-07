@@ -29,9 +29,9 @@ public class StudServlet extends HttpServlet {
 			ResultSet rs=stat.executeQuery("select * from student");
 		
 			out.println("<table border=2>");
-			out.println("<tr><th>RollNo</th><th>Name</th><th>Marks</th></tr>");
+			out.println("<tr><th>RollNo</th><th>Name</th><th>Address</th></tr>");
 			while(rs.next()) {
-				out.println("<tr><td>"+rs.getInt(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getInt(3)+"</td></tr>");
+				out.println("<tr><td>"+rs.getInt(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td></tr>");
 			}
 			out.println("</table>");
 			rs.close();
