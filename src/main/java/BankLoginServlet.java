@@ -25,7 +25,7 @@ public class BankLoginServlet extends HttpServlet {
 			
 			ResultSet rs=stat.executeQuery();
 			if(rs.next()) {
-				out.println("<center><h1>Welcome "+rs.getString(1)+"</h1><br><br><form method='post' action='GetBalServlet'>");
+				out.println("<center><h1>Welcome "+rs.getString(4)+"</h1><br><br><form method='post' action='GetBalServlet'>");
 				out.println("Enter Account No:<input type='text' name='t3'><br><br>");
 				out.println("<input type='submit' value='Submit'>");
 			}
